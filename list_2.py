@@ -8,6 +8,10 @@ while True:
 
 for p in products:
     print(p[0], '的價格是', p[1]) # for loop 存取二維清單
+    
+with open ('products.txt', 'w') as f: # 打開欲寫入或創造的檔案，txt改成其他副檔名也可以(如csv)
+    for p in products:
+        f.write(p[0], ',', p[1], '/n') # 檔案真正寫入動作的程式碼
 
 
 
